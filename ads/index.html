@@ -4,143 +4,72 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Hyper Tokens Ads · Partner Gallery</title>
+<title>Hyper Tokens Ads</title>
 <link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/jbm.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face{font-family:Inter;src:url(fonts/inter.woff2) format("woff2");font-weight:100 900;font-display:swap}
-@font-face{font-family:"JetBrains Mono";src:url(fonts/jbm.woff2) format("woff2");font-weight:100 800;font-display:swap}
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0B0D12;--card:#12151C;--bd:#1F2430;--bd2:#2A3040;--tx:#EDEEF2;--mu:#A0A7B8;--mu2:#7D8496;--mint:#2ED3A0;--red:#FF4D6A;--hl:#50D2C1;--lime:#CCFF00}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--tx);font:500 16px/1.5 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
-img.ad{display:block;border:1px solid var(--bd2);border-radius:4px;background:#000}
-img.ad.h600{width:300px;height:600px}
-img.ad.w728{width:728px;height:90px}
-img.ad.sm600{width:150px;height:300px}
-img.ad.sm250{width:150px;height:125px}
-img.ad.sm728{width:364px;height:45px}
-nav{position:sticky;top:0;z-index:40;background:rgba(11,13,18,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
-.logo{font-weight:900;font-size:18px;letter-spacing:-.02em}.logo span{color:var(--hl)}
-.nav-meta{font:600 11px 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--mu2);display:flex;gap:10px;align-items:center}
-.pill{border:1px solid var(--bd2);background:var(--card);padding:5px 10px;border-radius:999px;color:var(--mu)}
-.hero{padding:40px 0 18px;border-bottom:1px solid var(--bd)}
-.kicker{font:700 12px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:12px}
-.hero h1{font:900 clamp(30px,4.5vw,52px)/1.05 Inter;letter-spacing:-.035em;max-width:16ch}
-.hero h1 em{font-style:normal;color:var(--hl)}
-.hero .lead{margin-top:12px;color:var(--mu);font-size:16px;max-width:54ch}
-section{padding:36px 0 8px}
-.sec-head{margin-bottom:16px}
-.sec-head h2{font:900 24px/1.1 Inter;letter-spacing:-.03em}
-.sec-head p{color:var(--mu);max-width:56ch;font-size:14px;margin-top:6px}
-.tag{display:inline-flex;align-items:center;gap:8px;font:700 11px 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--mu2);margin-bottom:8px}
-.tag i{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 10px var(--lime)}
-.top3{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;align-items:flex-start;background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:22px 16px}
-.unit{display:flex;flex-direction:column;align-items:center;gap:10px}
-.unit.both{width:100%;max-width:780px}
-.unit .label{font:900 13px 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase}
-.unit .label.vol{color:var(--red)}.unit .label.ivol{color:var(--mint)}.unit .label.both{color:var(--lime)}
-.unit .story{color:var(--mu);font-size:13px;text-align:center;max-width:300px;line-height:1.4}
-.unit.both .story{max-width:728px}
-.unit .meta{font:600 10px 'JetBrains Mono',monospace;color:var(--mu2);letter-spacing:.04em}
-.stage{background:#07090d;border:1px solid var(--bd2);border-radius:12px;padding:16px;display:flex;flex-direction:column;align-items:center;gap:10px;width:100%}
-.replay{appearance:none;border:1px solid var(--bd2);background:#0a0c10;color:var(--tx);font:700 11px 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;padding:8px 12px;border-radius:999px;cursor:pointer}
+:root{--bg:#0B0D12;--bd:#1F2430;--bd2:#2A3040;--tx:#EDEEF2;--mu:#A0A7B8;--mu2:#7D8496;--mint:#2ED3A0;--red:#FF4D6A;--hl:#50D2C1}
+html,body{height:100%;background:var(--bg);color:var(--tx);font:500 15px/1.4 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100vh;display:flex;flex-direction:column}
+header{flex:0 0 auto;display:flex;align-items:center;justify-content:center;padding:14px 20px 6px;border-bottom:1px solid var(--bd)}
+.logo{font:900 18px/1 Inter;letter-spacing:-.02em}
+.logo span{color:var(--hl)}
+main{flex:1 1 auto;display:flex;align-items:center;justify-content:center;padding:12px 20px 8px;min-height:0}
+.pair{display:flex;gap:clamp(16px,3vw,36px);align-items:flex-end;justify-content:center;width:100%;max-width:1400px}
+.unit{display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0}
+.unit .lab{font:800 12px/1 'Inter',system-ui;letter-spacing:.14em;text-transform:uppercase}
+.unit .lab.ivol{color:var(--mint)}.unit .lab.vol{color:var(--red)}
+.frame{display:flex;flex-direction:column;align-items:center;gap:10px}
+img.ad{
+  display:block;
+  width:auto;
+  height:min(88vh, 820px);
+  max-height:88vh;
+  max-width:calc((100vw - 80px) / 2);
+  aspect-ratio:300 / 600;
+  object-fit:contain;
+  border:1px solid var(--bd2);
+  border-radius:6px;
+  background:#000;
+}
+.replay{
+  appearance:none;border:1px solid var(--bd2);background:#0a0c10;color:var(--tx);
+  font:700 11px Inter,system-ui;letter-spacing:.08em;text-transform:uppercase;
+  padding:8px 14px;border-radius:999px;cursor:pointer
+}
 .replay:hover{border-color:var(--hl);color:var(--hl)}
-.more{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
-.scard{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px;display:flex;flex-direction:column;align-items:center;gap:8px}
-.scard .name{font:800 13px Inter;width:100%}
-.scard .meta{font:600 10px 'JetBrains Mono',monospace;color:var(--mu2);width:100%}
-.frame{background:#07090d;border:1px solid var(--bd2);border-radius:8px;padding:8px;display:flex;justify-content:center}
-footer{margin-top:40px;border-top:1px solid var(--bd);padding:24px 0 40px}
-footer .risk{color:var(--mu2);font-size:13px;max-width:72ch}
-footer .row{margin-top:14px;font:600 12px 'JetBrains Mono',monospace;color:var(--mu2);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media(max-width:700px){img.ad.h600,img.ad.w728{width:min(100%,300px);height:auto}.unit.both img.ad.w728{width:100%}}
+footer{flex:0 0 auto;padding:10px 20px 16px;text-align:center;border-top:1px solid var(--bd)}
+footer .risk{color:var(--mu2);font-size:12px;max-width:64ch;margin:0 auto;line-height:1.45}
+@media (max-width:720px){
+  main{padding:10px}
+  .pair{flex-direction:column;align-items:center;gap:18px}
+  img.ad{height:min(70vh, 640px);max-width:92vw}
+}
 </style>
 </head>
 <body>
-<nav>
-  <div class="wrap">
-    <div class="logo">HYPER <span>TOKENS</span></div>
-    <div class="nav-meta"><span class="pill">Partner gallery</span><span>3 up top · loops forever</span></div>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="kicker">Fable clarity set · Bitmedia US desktop</div>
-    <h1>Three ads. <em>One beat</em> each.</h1>
-    <p class="lead">VOL, iVOL, and both — rendered at 2× pixel density, shown at true 1× CSS. No upscaling. Plain-language payoff a newcomer gets in three seconds.</p>
-  </div>
-</header>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="tag"><i></i> Partner picks</div>
-      <h2>The only three on the table</h2>
-      <p>2× assets · infinite loop · replay if you want to catch the wipe again.</p>
+<header><div class="logo">HYPER <span>TOKENS</span></div></header>
+<main>
+  <div class="pair">
+    <div class="unit">
+      <div class="lab ivol">iVOL</div>
+      <div class="frame">
+        <img class="ad" src="ads/3x/300x600/r19-i5.gif?v=5" width="300" height="600" data-replay="ivol" alt="iVOL — Perps suck. Get ~6x long BTC.">
+        <button type="button" class="replay" data-replay-btn="ivol">↻ Replay</button>
+      </div>
     </div>
-    <div class="top3">
-      <div class="unit">
-        <div class="label vol">VOL</div>
-        <div class="story">Perps make noise — VOL is ~6x short BTC in one token, no margin calls to you.</div>
-        <div class="meta">r19-v5 · 300×600 @2×</div>
-        <div class="stage">
-          <img class="ad h600" src="ads/2x/300x600/r19-v5.gif?v=4" width="300" height="600" data-replay="top-vol" alt="VOL ad r19-v5">
-          <button type="button" class="replay" data-replay-btn="top-vol">↻ Replay</button>
-        </div>
-      </div>
-      <div class="unit">
-        <div class="label ivol">iVOL</div>
-        <div class="story">Perps suck — get ~6x long BTC without the babysitting, in one token.</div>
-        <div class="meta">r19-i5 · 300×600 @2×</div>
-        <div class="stage">
-          <img class="ad h600" src="ads/2x/300x600/r19-i5.gif?v=4" width="300" height="600" data-replay="top-ivol" alt="iVOL ad r19-i5">
-          <button type="button" class="replay" data-replay-btn="top-ivol">↻ Replay</button>
-        </div>
-      </div>
-      <div class="unit both">
-        <div class="label both">VOL + iVOL</div>
-        <div class="story">Perps suck — go ~6x long with iVOL or ~6x short with VOL; no margin of yours to suck.</div>
-        <div class="meta">r20-f14 · 728×90 @2×</div>
-        <div class="stage">
-          <img class="ad w728" src="ads/2x/728x90/r20-f14.gif?v=4" width="728" height="90" data-replay="top-both" alt="Both ad r20-f14">
-          <button type="button" class="replay" data-replay-btn="top-both">↻ Replay</button>
-        </div>
+    <div class="unit">
+      <div class="lab vol">VOL</div>
+      <div class="frame">
+        <img class="ad" src="ads/3x/300x600/r19-v5.gif?v=5" width="300" height="600" data-replay="vol" alt="VOL — Perps suck. Get ~6x short BTC.">
+        <button type="button" class="replay" data-replay-btn="vol">↻ Replay</button>
       </div>
     </div>
   </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="tag"><i></i> More concepts</div>
-      <h2>Everything else</h2>
-      <p>Smaller previews of the wider set — not the partner meeting stack.</p>
-    </div>
-    <div class="more">
-      <div class="scard"><div class="name">Nanny · iVOL</div><div class="meta">r19-i4 · 300×600</div><div class="frame"><img class="ad sm600" src="ads/2x/300x600/r19-i4.gif?v=4" width="150" height="300" alt="Nanny"></div></div>
-      <div class="scard"><div class="name">Short margin · VOL</div><div class="meta">r19-v4 · 300×600</div><div class="frame"><img class="ad sm600" src="ads/2x/300x600/r19-v4.gif?v=4" width="150" height="300" alt="Short margin"></div></div>
-      <div class="scard"><div class="name">Countdown · both</div><div class="meta">r20-f13 · 300×600</div><div class="frame"><img class="ad sm600" src="ads/2x/300x600/r20-f13.gif?v=4" width="150" height="300" alt="Countdown"></div></div>
-      <div class="scard"><div class="name">Vacuum · both</div><div class="meta">r20-f14 · 300×600</div><div class="frame"><img class="ad sm600" src="ads/2x/300x600/r20-f14.gif?v=4" width="150" height="300" alt="Vacuum half"></div></div>
-      <div class="scard"><div class="name">Babysitting · 250</div><div class="meta">r19-i5 · 300×250</div><div class="frame"><img class="ad sm250" src="ads/2x/300x250/r19-i5.gif?v=4" width="150" height="125" alt="i5 250"></div></div>
-      <div class="scard"><div class="name">Noise · 250</div><div class="meta">r19-v5 · 300×250</div><div class="frame"><img class="ad sm250" src="ads/2x/300x250/r19-v5.gif?v=4" width="150" height="125" alt="v5 250"></div></div>
-      <div class="scard"><div class="name">Nanny · 728</div><div class="meta">r19-i4 · 728×90</div><div class="frame"><img class="ad sm728" src="ads/2x/728x90/r19-i4.gif?v=4" width="364" height="45" alt="i4 728"></div></div>
-      <div class="scard"><div class="name">Countdown · 728</div><div class="meta">r20-f13 · 728×90</div><div class="frame"><img class="ad sm728" src="ads/2x/728x90/r20-f13.gif?v=4" width="364" height="45" alt="f13 728"></div></div>
-      <div class="scard"><div class="name">Bull · brand check</div><div class="meta">r10-i4 · 1×</div><div class="frame"><img class="ad sm600" src="ads/1x/300x600/r10-i4.gif?v=4" width="150" height="300" alt="Bull"></div></div>
-      <div class="scard"><div class="name">Both tokens · brand check</div><div class="meta">r10-b5 · 1×</div><div class="frame"><img class="ad sm600" src="ads/1x/300x600/r10-b5.gif?v=4" width="150" height="300" alt="Both face"></div></div>
-    </div>
-  </div>
-</section>
-
+</main>
 <footer>
-  <div class="wrap">
-    <p class="risk">Leveraged tokens can lose most or all of their value; no return is guaranteed.</p>
-    <div class="row"><span>Hyper Tokens · Partner ads gallery</span><span>Preview only · noindex</span></div>
-  </div>
+  <p class="risk">Leveraged tokens can lose most or all of their value; no return is guaranteed.</p>
 </footer>
 <script>
 function replayGif(id){
