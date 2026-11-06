@@ -304,7 +304,7 @@ footer .legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--bd2);d
 
     <div class="steps3">
       <div class="card"><span class="n">1</span><h3>You open a 6x perp</h3><p>Your margin covers one-sixth of the position. At entry, that's 6x — and that is the last moment it is exactly 6x.</p></div>
-      <div class="card"><span class="n">2</span><h3>BTC moves 5%</h3><p>Down 5%: the same position now runs 8.1x on less margin — and a 16.7% drop is a liquidation. Up 5%: 4.8x. Leverage rises as you lose and falls as you win.</p></div>
+      <div class="card"><span class="n">2</span><h3>BTC moves 5%</h3><p>Down 5%: the same position now runs 8.1x on less margin. Up 5%: 4.8x. Leverage rises as you lose and falls as you win. Illustrative for an unrebalanced 6x perp — not a vault wipeout threshold.</p></div>
       <div class="card"><span class="n">3</span><h3>iVOL re-sizes toward ~6x</h3><p>The vault adds or trims exposure so the token keeps targeting ~6x — eligible about every 4 hours or on 10% drift — and it posts the margin. You just have the token. No perps to manage yourself.</p></div>
     </div>
   </div>
@@ -370,8 +370,8 @@ footer .legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--bd2);d
     <div class="buy">
       <div class="stepl">
         <div class="step"><span class="n">1</span><div><h3>Pay with USDC from any of 7 chains</h3><p>HyperEVM, Arbitrum, Base and more. Bridge and gas are shown in the quote before you confirm. Minimum 10 USDC.</p></div></div>
-        <div class="step"><span class="n">2</span><div><h3>One transaction — pool first, vault as fallback</h3><p>Your USDC buys iVOL from the USDC pool. If the pool is thin, the vault mints new tokens at NAV instead. Either way it is one approval in your wallet.</p></div></div>
-        <div class="step"><span class="n">3</span><div><h3>iVOL lands in your wallet</h3><p>Sell into the pool any time, or redeem at NAV straight from the vault. Fees: 1% pool each way, or 0.1% mint / 0.3% redeem at NAV; 2%/yr management, venue fees and funding sit inside NAV.</p></div></div>
+        <div class="step"><span class="n">2</span><div><h3>Review the quote — pool first, vault as fallback</h3><p>Your USDC buys iVOL from the USDC pool. If the pool is thin, the vault mints new tokens at NAV instead. Review the quote, then approve the steps shown in your wallet (approval plus deposit when the route needs both).</p></div></div>
+        <div class="step"><span class="n">3</span><div><h3>iVOL lands in your wallet</h3><p>Sell into the pool when depth allows, or redeem at NAV from the vault when redemptions are open. Quotes govern availability and fees. Fees: pool fee is quote-dependent (about 0.3–1%), or 0.1% mint / 0.3% redeem at NAV; 2%/yr management, venue fees and funding sit inside NAV. In an emergency close, redemptions can pause.</p></div></div>
       </div>
       <div class="card buycard">
         <div class="tag">Ready?</div>
@@ -392,7 +392,7 @@ footer .legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--bd2);d
     <div class="risks">
       <div class="riskline"><b>Leveraged tokens can lose most or all of their value; no return is guaranteed.</b>iVOL is a leveraged product built for a move, not for parking money. Read the full <a href="https://hypertokens.io/risk/" style="color:var(--acc);font-weight:700;text-decoration:none">risk disclosure →</a></div>
       <ul>
-        <li><b>Leverage.</b> At ~6x, a 16.7% drop in BTC against the position is roughly a wipe-out of the vault's position. Emergency close can trigger at 20% free margin, with redemptions paused.</li>
+        <li><b>Leverage.</b> At ~6x, a fast enough adverse BTC move can erase most or all of the vault's position. Emergency close can trigger at low free margin, with redemptions paused. There is no fixed % wipeout floor for the token.</li>
         <li><b>Liquidation.</b> You have no liquidation price of your own, but the vault's perpetual can be liquidated by a fast enough adverse move.</li>
         <li><b>Sideways markets.</b> Re-sizing has a cost when price chops. NAV can fall even if BTC ends flat.</li>
         <li><b>Fees and funding.</b> Management, venue fees and funding accrue inside NAV, whether or not BTC moves your way.</li>
@@ -411,10 +411,10 @@ footer .legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--bd2);d
     <div class="faq">
       <details><summary>What's a perp, in one sentence?</summary><p>A perpetual futures contract: a position that lets you hold a multiple of the BTC you paid for, as long as enough margin stays in the account — with no expiry, and a funding payment that passes between longs and shorts.</p></details>
       <details><summary>Is iVOL the same as a 6x perp?</summary><p>No. A perp is 6x at entry and then drifts with price. iVOL targets ~6x and is re-sized back toward it; between re-sizes the ratio drifts too. Over any given holding period the two can return more or less than each other, so iVOL is not "6x BTC returns" — it is a ~6x long target you don't have to maintain yourself.</p></details>
-      <details><summary>Can I get liquidated?</summary><p>You have no liquidation price of your own — the vault manages margin. The vault's own position can be liquidated by a fast enough adverse move (roughly 16.7% drop at 6x, earlier in a thin market), which would erase most or all of the token's value.</p></details>
+      <details><summary>Can I get liquidated?</summary><p>You have no liquidation price of your own — the vault manages margin. The vault's own position can be closed or liquidated by a fast enough adverse move (sooner in a thin market), which would erase most or all of the token's value. Do not treat any fixed % move as a guaranteed wipeout boundary.</p></details>
       <details><summary>What does it cost?</summary><p>Pool: 1% each way. Vault fallback: 0.1% to mint, 0.3% to redeem at NAV. Inside NAV: 2%/yr management, 0.1% builder fee, venue trading fees and funding. Bridge and gas are shown in each quote.</p></details>
       <details><summary>Who controls the vault?</summary><p>Admin sits behind a Fordefi multi-sig (MPC). Contracts are upgradeable and the team can pause. The token is an ERC-4626 vault share on HyperEVM; the position lives on a derivatives venue.</p></details>
-      <details><summary>How do I sell?</summary><p>Sell into the USDC pool any time, or redeem at NAV from the vault. The vault keeps a USDC reserve for instant redemptions; in an emergency close, redemptions can pause.</p></details>
+      <details><summary>How do I sell?</summary><p>Sell into the USDC pool when depth allows, or redeem at NAV when redemptions are open. Quotes govern availability and fees. The vault keeps a USDC reserve for redemptions; in an emergency close, redemptions can pause.</p></details>
     </div>
   </div>
 </section>
@@ -423,7 +423,7 @@ footer .legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--bd2);d
 <section class="final">
   <div class="wrap">
     <h2>One token. Targets ~6x long BTC.<br>No perps to manage yourself.</h2>
-    <div class="cta-row"><a class="btn p cta " href="https://hypertokens.io/token/iVOL/">Get iVOL →</a><a class="btn g" href="https://hypertokens.io/presell-vol/">Bearish instead? VOL →</a></div>
+    <div class="cta-row"><a class="btn p cta " href="https://hypertokens.io/token/iVOL/">Get iVOL →</a><a class="btn g" href="https://hypertokens.io/lp/vol/">Bearish instead? VOL →</a></div>
     <p class="pq" style="margin-top:18px">Leveraged tokens can lose most or all of their value; no return is guaranteed.</p>
   </div>
 </section>
@@ -435,7 +435,7 @@ footer .legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--bd2);d
         <div class="wm" style="color:var(--tx)">HYPER TOKENS</div>
         <p style="margin-top:12px">Leveraged and inverse tokens are high risk and can lose everything you put in. No personal liquidation price — the vault manages margin — but the vault itself can be liquidated. Holding over time can lose money even if the market ends flat. Not financial advice.</p>
       </div>
-      <div class="links"><a href="https://hypertokens.io/token/iVOL/">iVOL token page</a><a href="https://hypertokens.io/presell-vol/">VOL token page</a><a href="https://hypertokens.io/trade/">Trade</a><a href="https://hypertokens.io/faq/">FAQ</a></div>
+      <div class="links"><a href="https://hypertokens.io/token/iVOL/">iVOL token page</a><a href="https://hypertokens.io/lp/vol/">VOL token page</a><a href="https://hypertokens.io/trade/">Trade</a><a href="https://hypertokens.io/faq/">FAQ</a></div>
       <div class="links"><a href="https://hypertokens.io/risk/">Risk disclosure</a><a href="https://hypertokens.io/security/">Security</a><a href="https://hypertokens.io/terms/">Terms</a><a href="https://hypertokens.io/privacy/">Privacy</a></div>
     </div>
     <div class="legal">
@@ -565,6 +565,69 @@ footer .legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--bd2);d
       [lo+pad,(lo+hi)/2,hi-pad].forEach(function(v){ g+='<line x1="'+L+'" y1="'+Y(v)+'" x2="'+(L+pw)+'" y2="'+Y(v)+'" stroke="var(--bd2)"/><text x="'+(L+pw+8)+'" y="'+(Y(v)+4)+'" font-family="JBM,monospace" font-weight="700" font-size="11" fill="var(--mu2)">$'+fmt(v,3)+'</text>'; });
       $("lv-wrap").innerHTML='<svg viewBox="0 0 '+W+' '+H+'">'+g+'</svg>'; }).catch(function(){}); }
   })();
+})();
+</script>
+
+
+<script>
+/* Hyper Tokens first-party + PostHog analytics (same events/ref scheme as the site).
+   Events: landing_view (PostHog), visit + engaged (POST /api/roi/e), cta_click (PostHog) on a.cta.
+   Honours GPC/DNT and localStorage.ht_roi_optout=1. Only fires on hypertokens.io. */
+(function(){
+  try {
+    var onSite=/(^|\.)hypertokens\.io$/.test(location.hostname);
+    if(!onSite) return;
+    var KEYS=["utm_source","utm_medium","utm_campaign","utm_content","utm_term","ref","bm_click_id","bm_geo","pl","click_id"];
+    var privacy=function(){ try{ var n=navigator; return n.globalPrivacyControl===true||n.doNotTrack==="1"||!!localStorage.getItem("ht_roi_optout"); }catch(e){ return true; } };
+    var normRef=function(s){ return String(s).trim().replace(/^@+/,"").toLowerCase().replace(/[^a-z0-9_.\-]/g,"_").replace(/_+/g,"_").slice(0,32).replace(/^_+|_+$/g,""); };
+    var current=function(){ var p=new URLSearchParams(location.search), t={}; KEYS.forEach(function(k){ var v=p.get(k); if(v) t[k]=k==="ref"?normRef(v):v.trim().slice(0,k==="bm_click_id"||k==="click_id"?64:40); }); if(t.ref==="") delete t.ref; return Object.keys(t).length?Object.assign({at:Date.now()},t):null; };
+    var readSrc=function(){ try{ var m=document.cookie.match(/(?:^|;\s*)ht_src=([^;]*)/); return m?JSON.parse(decodeURIComponent(m[1])):null; }catch(e){ return null; } };
+    var captureSrc=function(){ try{ if(privacy()){ if(/(?:^|;\s*)ht_src=/.test(document.cookie)) document.cookie="ht_src=; Max-Age=0; Path=/; SameSite=Lax; Secure"; return null; } var now=current(), prev=readSrc(); if(!now) return prev; var t={ts:Date.now(),path:location.pathname.slice(0,80)}; KEYS.forEach(function(k){ if(now[k]) t[k]=String(now[k]); }); var v={ft:(prev&&prev.ft)||t, lt:t}; document.cookie="ht_src="+encodeURIComponent(JSON.stringify(v))+"; Max-Age="+(90*86400)+"; Path=/; SameSite=Lax; Secure"; return v; }catch(e){ return null; } };
+    var lsGet=function(k){ try{ return JSON.parse(localStorage.getItem(k)||"null"); }catch(e){ return null; } };
+    var lsSet=function(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} };
+    var vid=function(){ var v=lsGet("ht_vid"); if(!v){ v=Math.random().toString(36).slice(2,10)+Date.now().toString(36).slice(-4); lsSet("ht_vid",v);} return v; };
+    var touches=function(){ var c=captureSrc(); var now=current(); var ft=lsGet("ht_ft"); if(!ft&&c&&c.ft){ var x=c.ft, k={}; KEYS.forEach(function(n){ if(x[n]!=null) k[n]=x[n]; }); k.at=x.ts; ft=k; lsSet("ht_ft",ft);} if(!ft){ ft=now||{utm_source:"direct",at:Date.now()}; lsSet("ht_ft",ft);} if(now) lsSet("ht_lt",now); return {ft:ft, lt:lsGet("ht_lt")||ft}; };
+    var pages=function(){ var pg=location.pathname.slice(0,60)||"/"; var lp=pg; try{ lp=sessionStorage.getItem("ht_lp")||""; if(!lp){ lp=pg; sessionStorage.setItem("ht_lp",pg);} }catch(e){} return {pg:pg, lp:lp}; };
+    var post=function(body){ return fetch("/api/roi/e",{method:"POST",headers:{"content-type":"application/json"},body:body,keepalive:true}); };
+    var sent={};
+    var sessionClick=function(type,src){ try{ if(type==="visit"){ var sc=current()&&src&&src.lt?src.lt:null; if(sc) sessionStorage.setItem("ht_sc",JSON.stringify(sc)); return sc; } if(type==="engaged") return JSON.parse(sessionStorage.getItem("ht_sc")||"null"); }catch(e){} return null; };
+    var roiTrack=function(type){ try{ if(privacy()){ if(type==="visit"){ /* anon land */ var p=new URLSearchParams(location.search), trm=(p.get("utm_term")||"").slice(0,40), geo=(p.get("bm_geo")||"").slice(0,2); if(trm||geo){ var b=JSON.stringify({type:"anon",ev:"land",trm:trm,geo:geo}); if(!(navigator.sendBeacon&&navigator.sendBeacon("/api/roi/e",new Blob([b],{type:"application/json"})))) post(b).catch(function(){}); } } return; }
+      var key=type==="visit"?"v"+location.pathname:type==="engaged"?"e":""; if(key){ if(sent[key]) return; sent[key]=1; }
+      var tch=touches(), src=readSrc(), sc=sessionClick(type,src), pg=pages();
+      var body=JSON.stringify(Object.assign({type:type,vid:vid(),ft:tch.ft,lt:tch.lt,pg:pg.pg,lp:pg.lp}, src?{src:src}:{}, sc?{sc:sc}:{}));
+      if(navigator.sendBeacon&&navigator.sendBeacon("/api/roi/e",new Blob([body],{type:"application/json"}))) return;
+      post(body).catch(function(){});
+    }catch(e){} };
+    /* PostHog: landing_view + cta_click (public project key, same as site) */
+    var PH_KEY="phc_kg6peLkGk4wRn57w6iMb3Kneff28ZNvZsuLkDga6PdAc";
+    var ph=null, phq=[];
+    var attr=function(){ try{ var c=readSrc(); if(!c) return {}; var o={}, a=c.lt||{}, f=c.ft||{}; ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","ref"].forEach(function(k){ if(a[k]) o[k]=String(a[k]); }); if(f.ref) o.first_ref=String(f.ref); if(f.utm_source) o.first_utm_source=String(f.utm_source); if(f.path) o.first_landing=String(f.path); if(a.path) o.landing=String(a.path); return o; }catch(e){ return {}; } };
+    var phTrack=function(ev, props){ var payload=Object.assign({event:ev,ts:Date.now()}, attr(), props||{}); if(ph){ try{ ph.capture(ev, payload); }catch(e){} } else if(phq.length<50) phq.push([ev,payload]); };
+    var landingViewOnce=function(){ try{ var k="ht_lv:"+location.pathname; if(sessionStorage.getItem(k)) return; sessionStorage.setItem(k,"1"); }catch(e){} try{ captureSrc(); }catch(e){} phTrack("landing_view",{path:location.pathname,landing:location.pathname}); };
+    if(!privacy()){
+      var s=document.createElement("script"); s.async=true; s.src="https://us.i.posthog.com/static/array.js";
+      s.onload=function(){ try{ window.posthog.init(PH_KEY,{api_host:"https://us.i.posthog.com",persistence:"localStorage",autocapture:true,capture_pageview:true,ip:false,disable_session_recording:false,disable_surveys:true}); ph=window.posthog; phq.splice(0).forEach(function(x){ try{ ph.capture(x[0],x[1]); }catch(e){} }); }catch(e){} };
+      document.head.appendChild(s);
+    }
+    /* fire landing */
+    roiTrack("visit"); landingViewOnce();
+    /* engaged after 15s + interaction */
+    (function(){ var act=0, since=document.visibilityState==="visible"?Date.now():0, ix=false, done=false;
+      var scr=function(){ var h=document.documentElement, max=h.scrollHeight-h.clientHeight; return max>0?((h.scrollTop||window.scrollY)/max)*100:100; };
+      var check=function(){ if(done) return; var a=act+(since?Date.now()-since:0); if(a>=15e3&&(ix||scr()>=50)){ done=true; roiTrack("engaged"); } };
+      document.addEventListener("visibilitychange",function(){ if(document.visibilityState==="hidden"){ if(since) act+=Date.now()-since; since=0; } else since=Date.now(); });
+      document.addEventListener("click",function(e){ if(e.target&&e.target.closest&&e.target.closest("a,button,[role=button]")) ix=true; check(); },{capture:true,passive:true});
+      window.addEventListener("scroll",check,{passive:true}); setInterval(function(){ check(); },5e3);
+    })();
+    /* CTA clicks */
+    document.querySelectorAll("a.cta").forEach(function(a){
+      a.addEventListener("click",function(){
+        var href=a.getAttribute("href")||"";
+        var sym=/\/token\/iVOL/i.test(href)?"iVOL":/\/token\/VOL/i.test(href)?"VOL":"other";
+        phTrack("cta_click",{cta:"buy",symbol:sym,placement:"presell"});
+      },{passive:true});
+    });
+  } catch(e) {}
 })();
 </script>
 </body>
