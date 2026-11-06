@@ -227,6 +227,18 @@ footer .legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--bd2);d
   body{padding-bottom:76px}
 }
 @media (prefers-reduced-motion:reduce){ .btn{transition:none} }
+
+.lpvault{margin-top:18px;padding:18px 20px;border:1px solid var(--bd);border-radius:16px;background:linear-gradient(180deg,rgba(46,211,160,.06),transparent 70%),var(--card)}
+.lpvault.vol{background:linear-gradient(180deg,rgba(255,77,106,.07),transparent 70%),var(--card)}
+.lpvault .kicker{font:800 11px/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:0 0 8px}
+.lpvault h3{font:800 18px/1.25 var(--sans);margin:0 0 8px;color:var(--tx)}
+.lpvault p{margin:0;font:500 15px/1.55 var(--sans);color:var(--mu)}
+.lpvault .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.lpvault .pill{padding:12px 14px;border:1px solid var(--bd);border-radius:12px;background:var(--bg)}
+.lpvault .pill b{display:block;font:800 13px/1.3 var(--sans);color:var(--tx);margin-bottom:4px}
+.lpvault .pill span{font:500 13px/1.45 var(--sans);color:var(--mu)}
+@media (max-width:800px){.lpvault .split{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -259,6 +271,7 @@ footer .legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--bd2);d
         <a class="btn g" href="#how">See the drift ↓</a>
       </div>
       <p class="trust"><a href="https://hypertokens.io/security/">Pashov-audited ↗</a> · Fordefi multi-sig (MPC) · <a href="https://hypertokens.io/token/iVOL/">Contract ↗</a> · USDC in · 7 chains</p>
+      <p class="risk" style="margin-top:14px;max-width:560px">Leveraged tokens can lose most or all of their value; no return is guaranteed.</p>
       <p class="pq">Leveraged token · can lose most or all · not for parking</p>
     </div>
 
@@ -365,13 +378,23 @@ footer .legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--bd2);d
 <!-- ============ HOW TO BUY ============ -->
 <section id="buy">
   <div class="wrap">
-    <div class="eyebrow">How to buy</div>
-    <h2 style="margin-top:14px">Three steps to iVOL.</h2>
-    <div class="buy">
+    <div class="eyebrow">How to buy &amp; sell</div>
+    <h2 style="margin-top:14px">Simple. Usually instant.</h2>
+    <p style="margin-top:10px;max-width:640px;font:500 16px/1.5 var(--sans);color:var(--mu)">Connect a wallet, check the quote, confirm. Most everyday sizes swap straight from the USDC pool — iVOL lands in your wallet right away.</p>
+    <div class="lpvault ">
+      <div class="kicker">Pool vs vault — in plain words</div>
+      <h3>Normal size → instant pool swap. Larger size → vault mint or redeem.</h3>
+      <p>Think of the USDC pool as the quick counter: for typical buys and sells you swap in one step and you’re done. If your order is larger than the pool can fill cleanly, the quote routes to the vault instead — minting new iVOL on the way in, or redeeming at NAV on the way out. Same button either way; the quote shows which path and the fees before you confirm.</p>
+      <div class="split">
+        <div class="pill"><b>Everyday size</b><span>Instant swap from the USDC pool. iVOL in, USDC out — or the reverse when you sell.</span></div>
+        <div class="pill"><b>Larger order</b><span>Routes to the vault mint (buy) or redeem (sell) at NAV. Still one flow in the wallet; the quote spells out the steps.</span></div>
+      </div>
+    </div>
+    <div class="buy" style="margin-top:22px">
       <div class="stepl">
-        <div class="step"><span class="n">1</span><div><h3>Pay with USDC from any of 7 chains</h3><p>HyperEVM, Arbitrum, Base and more. Bridge and gas are shown in the quote before you confirm. Minimum 10 USDC.</p></div></div>
-        <div class="step"><span class="n">2</span><div><h3>Review the quote — pool first, vault as fallback</h3><p>Your USDC buys iVOL from the USDC pool. If the pool is thin, the vault mints new tokens at NAV instead. Review the quote, then approve the steps shown in your wallet (approval plus deposit when the route needs both).</p></div></div>
-        <div class="step"><span class="n">3</span><div><h3>iVOL lands in your wallet</h3><p>Sell into the pool when depth allows, or redeem at NAV from the vault when redemptions are open. Quotes govern availability and fees. Fees: pool fee is quote-dependent (about 0.3–1%), or 0.1% mint / 0.3% redeem at NAV; 2%/yr management, venue fees and funding sit inside NAV. In an emergency close, redemptions can pause.</p></div></div>
+        <div class="step"><span class="n">1</span><div><h3>Pay with USDC</h3><p>HyperEVM, Arbitrum, Base and more — 7 chains. Minimum 10 USDC. Bridge and gas show in the quote first.</p></div></div>
+        <div class="step"><span class="n">2</span><div><h3>Confirm the quote</h3><p>Pool for normal sizes (instant). Vault mint/redeem for larger ones. Review what’s on screen, then approve what your wallet asks — nothing moves until you say yes.</p></div></div>
+        <div class="step"><span class="n">3</span><div><h3>iVOL in your wallet</h3><p>Sell the same way: pool when it has depth, vault redeem when that’s the better route. Fees and availability are always in the quote. Emergency closes can pause redemptions.</p></div></div>
       </div>
       <div class="card buycard">
         <div class="tag">Ready?</div>
@@ -379,6 +402,7 @@ footer .legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--bd2);d
         <a class="btn p cta " href="https://hypertokens.io/token/iVOL/">Get iVOL →</a>
         <p class="fine">You'll connect a wallet on the next page. Connecting moves no funds; every transaction needs your approval.</p>
         <p class="risk">Leveraged tokens can lose most or all of their value; no return is guaranteed.</p>
+        <p class="fine" style="margin-top:10px">Bearish instead? <a href="https://hypertokens.io/lp/vol/">VOL →</a></p>
       </div>
     </div>
   </div>
@@ -443,6 +467,7 @@ footer .legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--bd2);d
       <div>Hyper Tokens and Ensemble share an owner: Hyper Tokens is the trading site, Ensemble runs the vaults. © 2026 Hyper Tokens.</div>
     </div>
   </div>
+<p class="risk" style="margin:12px 0;font:500 12px/1.4 var(--sans);color:var(--mu)">Leveraged tokens can lose most or all of their value; no return is guaranteed.</p>
 </footer>
 
 <div class="sticky"><span class="t">iVOL · ~6x LONG</span><a class="btn p cta " href="https://hypertokens.io/token/iVOL/">Get iVOL →</a></div>

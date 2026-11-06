@@ -51,9 +51,9 @@
     "id": "IV-07",
     "product": "ivol",
     "l2": "Vault manages margin. You just hold the token.",
-    "sub": "THE VAULT MANAGES MARGIN \u00b7 PASHOV-AUDITED",
+    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
     "mid": "one_row",
-    "url": "?p=ivol&id=IV-07&mid=one_row&l2=Vault%20manages%20margin.%20You%20just%20hold%20the%20token.&sub=THE%20VAULT%20MANAGES%20MARGIN%20%C2%B7%20PASHOV-AUDITED"
+    "url": "?p=ivol&id=IV-07&mid=one_row&l2=Vault%20manages%20margin.%20You%20just%20hold%20the%20token.&sub=HYPEREVM%20ERC-20%20%C2%B7%20USDC%20IN%20%C2%B7%20PASHOV-AUDITED%20VAULT"
   },
   {
     "id": "IV-08",
@@ -139,9 +139,9 @@
     "id": "VL-08",
     "product": "vol",
     "l2": "Vault manages margin. You just hold the token.",
-    "sub": "THE VAULT MANAGES MARGIN \u00b7 PASHOV-AUDITED",
+    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
     "mid": "one_row",
-    "url": "?p=vol&id=VL-08&mid=one_row&l2=Vault%20manages%20margin.%20You%20just%20hold%20the%20token.&sub=THE%20VAULT%20MANAGES%20MARGIN%20%C2%B7%20PASHOV-AUDITED"
+    "url": "?p=vol&id=VL-08&mid=one_row&l2=Vault%20manages%20margin.%20You%20just%20hold%20the%20token.&sub=HYPEREVM%20ERC-20%20%C2%B7%20USDC%20IN%20%C2%B7%20PASHOV-AUDITED%20VAULT"
   },
   {
     "id": "VL-09",
