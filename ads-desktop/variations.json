@@ -1,202 +1,162 @@
 [
-  {
-    "id": "IV-01",
-    "p": "ivol",
-    "l2": "Auto-rebalanced. No perps to manage yourself.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "drift_vs_target",
-    "cta": "Get iVOL \u2192",
-    "badge": "iVOL \u00b7 ~6x LONG BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "IV-02",
-    "p": "ivol",
-    "l2": "Perps drift off 6x. iVOL re-sizes toward ~6x.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "drift_vs_target",
-    "cta": "Get iVOL \u2192",
-    "badge": "iVOL \u00b7 ~6x LONG BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "IV-03",
-    "p": "ivol",
-    "l2": "Re-sized toward ~6x, ~4h or on 10% drift.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "rebalance_dial",
-    "cta": "Get iVOL \u2192",
-    "badge": "iVOL \u00b7 ~6x LONG BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "IV-04",
-    "p": "ivol",
-    "l2": "No 3 a.m. margin top-ups. The vault posts it.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "one_row",
-    "cta": "Get iVOL \u2192",
-    "badge": "iVOL \u00b7 ~6x LONG BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "IV-05",
-    "p": "ivol",
-    "l2": "An ERC-20 on HyperEVM. Pay in USDC. Done.",
-    "sub": "USDC IN \u00b7 ONE TRANSACTION \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "drift_vs_target",
-    "cta": "Get iVOL \u2192",
-    "badge": "iVOL \u00b7 ~6x LONG BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "IV-06",
-    "p": "ivol",
-    "l2": "One simple token. Auto-rebalanced toward ~6x.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "rebalance_dial",
-    "cta": "Get iVOL \u2192",
-    "badge": "iVOL \u00b7 ~6x LONG BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "IV-07",
-    "p": "ivol",
-    "l2": "No liquidation price of your own.",
-    "sub": "THE VAULT MANAGES MARGIN \u00b7 PASHOV-AUDITED",
-    "mid": "drift_vs_target",
-    "cta": "Get iVOL \u2192",
-    "badge": "iVOL \u00b7 ~6x LONG BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "IV-08",
-    "p": "ivol",
-    "l2": "Pashov-audited vault. Fordefi multi-sig (MPC).",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 OWNER: FORDEFI MPC",
-    "mid": "drift_vs_target",
-    "cta": "Get iVOL \u2192",
-    "badge": "iVOL \u00b7 ~6x LONG BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "IV-09",
-    "p": "ivol",
-    "l2": "As BTC runs, iVOL re-sizes back toward ~6x.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "drift_vs_target",
-    "cta": "Get iVOL \u2192",
-    "badge": "iVOL \u00b7 ~6x LONG BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "IV-10",
-    "p": "ivol",
-    "l2": "Margin, funding, liq price \u2014 or one token.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "one_row",
-    "cta": "Get iVOL \u2192",
-    "badge": "iVOL \u00b7 ~6x LONG BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "VL-01",
-    "p": "vol",
-    "l2": "Auto-rebalanced. No perps to manage yourself.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "drift_vs_target",
-    "cta": "Get VOL \u2192",
-    "badge": "VOL \u00b7 ~6x SHORT BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "VL-02",
-    "p": "vol",
-    "l2": "Hedge a BTC stack without a perp account.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "drift_vs_target",
-    "cta": "Get VOL \u2192",
-    "badge": "VOL \u00b7 ~6x SHORT BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "VL-03",
-    "p": "vol",
-    "l2": "Perps drift off 6x. VOL re-sizes toward ~6x.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "drift_vs_target",
-    "cta": "Get VOL \u2192",
-    "badge": "VOL \u00b7 ~6x SHORT BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "VL-04",
-    "p": "vol",
-    "l2": "Re-sized toward ~6x, ~4h or on 10% drift.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "rebalance_dial",
-    "cta": "Get VOL \u2192",
-    "badge": "VOL \u00b7 ~6x SHORT BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "VL-05",
-    "p": "vol",
-    "l2": "No 3 a.m. margin top-ups. The vault posts it.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "one_row",
-    "cta": "Get VOL \u2192",
-    "badge": "VOL \u00b7 ~6x SHORT BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "VL-06",
-    "p": "vol",
-    "l2": "An ERC-20 on HyperEVM. Pay in USDC. Done.",
-    "sub": "USDC IN \u00b7 ONE TRANSACTION \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "drift_vs_target",
-    "cta": "Get VOL \u2192",
-    "badge": "VOL \u00b7 ~6x SHORT BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "VL-07",
-    "p": "vol",
-    "l2": "One simple token. Auto-rebalanced toward ~6x.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "rebalance_dial",
-    "cta": "Get VOL \u2192",
-    "badge": "VOL \u00b7 ~6x SHORT BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "VL-08",
-    "p": "vol",
-    "l2": "No liquidation price of your own.",
-    "sub": "THE VAULT MANAGES MARGIN \u00b7 PASHOV-AUDITED",
-    "mid": "drift_vs_target",
-    "cta": "Get VOL \u2192",
-    "badge": "VOL \u00b7 ~6x SHORT BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "VL-09",
-    "p": "vol",
-    "l2": "Pashov-audited vault. Fordefi multi-sig (MPC).",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 OWNER: FORDEFI MPC",
-    "mid": "drift_vs_target",
-    "cta": "Get VOL \u2192",
-    "badge": "VOL \u00b7 ~6x SHORT BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  },
-  {
-    "id": "VL-10",
-    "p": "vol",
-    "l2": "As BTC falls, VOL re-sizes back toward ~6x.",
-    "sub": "HYPEREVM ERC-20 \u00b7 USDC IN \u00b7 PASHOV-AUDITED VAULT",
-    "mid": "drift_vs_target",
-    "cta": "Get VOL \u2192",
-    "badge": "VOL \u00b7 ~6x SHORT BTC",
-    "pq": "LEVERAGED TOKEN \u00b7 HIGH RISK"
-  }
+ {
+  "id": "IV-01",
+  "product": "ivol",
+  "l2": "(default) Auto-rebalanced. No perps to manage yourself.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "drift_vs_target",
+  "url": "?p=ivol&id=IV-01&mid=drift_vs_target"
+ },
+ {
+  "id": "IV-02",
+  "product": "ivol",
+  "l2": "Perps drift off 6x. iVOL re-sizes toward ~6x.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "drift_vs_target",
+  "url": "?p=ivol&id=IV-02&mid=drift_vs_target&l2=Perps%20drift%20off%206x.%20iVOL%20re-sizes%20toward%20~6x."
+ },
+ {
+  "id": "IV-03",
+  "product": "ivol",
+  "l2": "Re-sizes toward ~6x whenever it drifts.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "rebalance_dial",
+  "url": "?p=ivol&id=IV-03&mid=rebalance_dial&l2=Re-sizes%20toward%20~6x%20whenever%20it%20drifts."
+ },
+ {
+  "id": "IV-04",
+  "product": "ivol",
+  "l2": "No 3 a.m. margin top-ups. The vault posts it.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "one_row",
+  "url": "?p=ivol&id=IV-04&mid=one_row&l2=No%203%20a.m.%20margin%20top-ups.%20The%20vault%20posts%20it."
+ },
+ {
+  "id": "IV-05",
+  "product": "ivol",
+  "l2": "Buy with USDC. No perp account needed.",
+  "sub": "HYPEREVM ERC-20 · 7 CHAINS · ONE TRANSACTION",
+  "mid": "drift_vs_target",
+  "url": "?p=ivol&id=IV-05&mid=drift_vs_target&l2=Buy%20with%20USDC.%20No%20perp%20account%20needed.&sub=HYPEREVM%20ERC-20%20%C2%B7%207%20CHAINS%20%C2%B7%20ONE%20TRANSACTION"
+ },
+ {
+  "id": "IV-06",
+  "product": "ivol",
+  "l2": "Funding and margin handled inside the vault.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "rebalance_dial",
+  "url": "?p=ivol&id=IV-06&mid=rebalance_dial&l2=Funding%20and%20margin%20handled%20inside%20the%20vault."
+ },
+ {
+  "id": "IV-07",
+  "product": "ivol",
+  "l2": "No personal liq price. Vault manages margin.",
+  "sub": "THE VAULT MANAGES MARGIN · PASHOV-AUDITED",
+  "mid": "no_liq_price",
+  "url": "?p=ivol&id=IV-07&mid=no_liq_price&l2=No%20personal%20liq%20price.%20Vault%20manages%20margin.&sub=THE%20VAULT%20MANAGES%20MARGIN%20%C2%B7%20PASHOV-AUDITED"
+ },
+ {
+  "id": "IV-08",
+  "product": "ivol",
+  "l2": "Sell into the pool or redeem at NAV.",
+  "sub": "PASHOV-AUDITED VAULT · FORDEFI MULTI-SIG (MPC)",
+  "mid": "drift_vs_target",
+  "url": "?p=ivol&id=IV-08&mid=drift_vs_target&l2=Sell%20into%20the%20pool%20or%20redeem%20at%20NAV.&sub=PASHOV-AUDITED%20VAULT%20%C2%B7%20FORDEFI%20MULTI-SIG%20%28MPC%29"
+ },
+ {
+  "id": "IV-09",
+  "product": "ivol",
+  "l2": "As BTC runs, iVOL re-sizes back toward ~6x.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "drift_vs_target",
+  "url": "?p=ivol&id=IV-09&mid=drift_vs_target&l2=As%20BTC%20runs%2C%20iVOL%20re-sizes%20back%20toward%20~6x."
+ },
+ {
+  "id": "IV-10",
+  "product": "ivol",
+  "l2": "Margin, funding, liq price — or one token.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "one_row",
+  "url": "?p=ivol&id=IV-10&mid=one_row&l2=Margin%2C%20funding%2C%20liq%20price%20%E2%80%94%20or%20one%20token."
+ },
+ {
+  "id": "VL-01",
+  "product": "vol",
+  "l2": "(default) Auto-rebalanced. No perps to manage yourself.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "drift_vs_target",
+  "url": "?p=vol&id=VL-01&mid=drift_vs_target"
+ },
+ {
+  "id": "VL-02",
+  "product": "vol",
+  "l2": "Hedge a BTC stack without a perp account.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "drift_vs_target",
+  "url": "?p=vol&id=VL-02&mid=drift_vs_target&l2=Hedge%20a%20BTC%20stack%20without%20a%20perp%20account."
+ },
+ {
+  "id": "VL-03",
+  "product": "vol",
+  "l2": "Perps drift off 6x. VOL re-sizes toward ~6x.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "drift_vs_target",
+  "url": "?p=vol&id=VL-03&mid=drift_vs_target&l2=Perps%20drift%20off%206x.%20VOL%20re-sizes%20toward%20~6x."
+ },
+ {
+  "id": "VL-04",
+  "product": "vol",
+  "l2": "Re-sizes toward ~6x whenever it drifts.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "rebalance_dial",
+  "url": "?p=vol&id=VL-04&mid=rebalance_dial&l2=Re-sizes%20toward%20~6x%20whenever%20it%20drifts."
+ },
+ {
+  "id": "VL-05",
+  "product": "vol",
+  "l2": "No 3 a.m. margin top-ups. The vault posts it.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "one_row",
+  "url": "?p=vol&id=VL-05&mid=one_row&l2=No%203%20a.m.%20margin%20top-ups.%20The%20vault%20posts%20it."
+ },
+ {
+  "id": "VL-06",
+  "product": "vol",
+  "l2": "Short BTC without a perp account.",
+  "sub": "HYPEREVM ERC-20 · 7 CHAINS · ONE TRANSACTION",
+  "mid": "drift_vs_target",
+  "url": "?p=vol&id=VL-06&mid=drift_vs_target&l2=Short%20BTC%20without%20a%20perp%20account.&sub=HYPEREVM%20ERC-20%20%C2%B7%207%20CHAINS%20%C2%B7%20ONE%20TRANSACTION"
+ },
+ {
+  "id": "VL-07",
+  "product": "vol",
+  "l2": "Funding and margin handled inside the vault.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "rebalance_dial",
+  "url": "?p=vol&id=VL-07&mid=rebalance_dial&l2=Funding%20and%20margin%20handled%20inside%20the%20vault."
+ },
+ {
+  "id": "VL-08",
+  "product": "vol",
+  "l2": "No personal liq price. Vault manages margin.",
+  "sub": "THE VAULT MANAGES MARGIN · PASHOV-AUDITED",
+  "mid": "no_liq_price",
+  "url": "?p=vol&id=VL-08&mid=no_liq_price&l2=No%20personal%20liq%20price.%20Vault%20manages%20margin.&sub=THE%20VAULT%20MANAGES%20MARGIN%20%C2%B7%20PASHOV-AUDITED"
+ },
+ {
+  "id": "VL-09",
+  "product": "vol",
+  "l2": "Sell into the pool or redeem at NAV.",
+  "sub": "PASHOV-AUDITED VAULT · FORDEFI MULTI-SIG (MPC)",
+  "mid": "drift_vs_target",
+  "url": "?p=vol&id=VL-09&mid=drift_vs_target&l2=Sell%20into%20the%20pool%20or%20redeem%20at%20NAV.&sub=PASHOV-AUDITED%20VAULT%20%C2%B7%20FORDEFI%20MULTI-SIG%20%28MPC%29"
+ },
+ {
+  "id": "VL-10",
+  "product": "vol",
+  "l2": "As BTC falls, VOL re-sizes back toward ~6x.",
+  "sub": "(default) HYPEREVM ERC-20 · USDC IN · PASHOV-AUDITED VAULT",
+  "mid": "drift_vs_target",
+  "url": "?p=vol&id=VL-10&mid=drift_vs_target&l2=As%20BTC%20falls%2C%20VOL%20re-sizes%20back%20toward%20~6x."
+ }
 ]

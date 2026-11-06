@@ -18,7 +18,7 @@
   --bg:#0B0D12; --card:#12151C; --bd:#2A3040; --bd2:#1F2430;
   --tx:#EDEEF2; --tx2:#C5CAD6; --risk:#B8BECC; --mu:#A0A7B8; --mu2:#7D8496; --mu3:#5B6270;
   --btc:#F0B90B; --perp:#9AA1B3; --ink:#0B0D12;
-  --acc:#2ED3A0; --glow:rgba(46,211,160,.55);   /* iVOL; VOL swaps to #FF4D6A via JS */
+  --acc:#2ED3A0; --glow:rgba(46,211,160,.55); --tacc:#2ED3A0;   /* iVOL; VOL swaps to #FF4D6A / #FF7A90 (small text) via JS */
   --sans:"Inter","Helvetica Neue",Arial,sans-serif;
   --mono:"JBM","JetBrains Mono","SF Mono",Menlo,Consolas,monospace;
 }
@@ -47,9 +47,9 @@ a.hit{inset:0;z-index:9;display:block;text-decoration:none}
 .spark{left:186px;top:3px;width:58px;height:12px;overflow:visible}
 .ci{right:10px;top:55px;font:700 7px/9px var(--mono);letter-spacing:.08em;color:var(--mu3)}
 .tg{left:118px;top:18px;width:1px;height:38px;background:rgba(237,238,242,.42)}
-.tgl{left:108px;top:56px;width:22px;text-align:center;font:700 7px/9px var(--mono);color:var(--mu2)}
+.tgl{left:89px;top:56px;width:60px;text-align:center;font:700 7px/9px var(--mono);color:var(--mu2)}
 .lab{left:10px;font:700 8.5px/10px var(--mono);letter-spacing:.04em}
-.lab.a{top:22px;color:var(--mu)} .lab.b{top:43px;color:var(--acc)}
+.lab.a{top:22px;color:var(--mu)} .lab.b{top:43px;color:var(--tacc)}
 .trk{left:42px;width:154px;height:4px;border-radius:2px;background:var(--bd2)}
 .trk.a{top:28px} .trk.b{top:49px}
 .mk{width:10px;height:10px;border-radius:50%;margin-left:-5px}
@@ -57,9 +57,11 @@ a.hit{inset:0;z-index:9;display:block;text-decoration:none}
 .mk.b{top:46px;background:var(--acc);box-shadow:0 0 0 1.5px var(--card),0 0 7px var(--glow)}
 .ro{left:200px;width:46px;text-align:right;font:700 10px/11px var(--mono);font-variant-numeric:tabular-nums}
 .ro.a{top:21px;color:var(--mu)} .ro.a.off{color:var(--btc)}
-.ro.b{top:42px;color:var(--acc)}
+.ro.b{top:42px;color:var(--tacc)}
 .ro.b.flash,.ro.c.flash{font-size:7px;letter-spacing:.04em}
 .mk.b{transition:none}
+.gh{top:47px;width:8px;height:8px;margin-left:-4px;border-radius:50%;border:1.5px solid var(--acc);background:transparent}
+.gl{top:50.5px;height:0;border-top:1.5px dotted var(--acc)}
 
 .mid{position:absolute;left:0;top:0;width:254px;height:63px;display:none}
 .mid.on{display:block}
@@ -89,14 +91,21 @@ a.hit{inset:0;z-index:9;display:block;text-decoration:none}
 .dr .k{position:absolute;left:0;top:3px;font:700 8.5px/10px var(--mono);letter-spacing:.04em}
 .dr .v{position:absolute;right:0;top:0;font:700 12px/16px var(--mono);font-variant-numeric:tabular-nums;text-align:right;width:70px}
 .dr.a{top:19px} .dr.a .k{color:var(--mu)} .dr.a .v{color:var(--mu)} .dr.a .v.off{color:var(--btc)}
-.dr.b{top:39px} .dr.b .k{color:var(--acc)} .dr.b .v{color:var(--acc)} .dr.b .v.flash{font-size:7.5px;letter-spacing:.04em}
+.dr.b{top:39px} .dr.b .k{color:var(--tacc)} .dr.b .v{color:var(--tacc)} .dr.b .v.flash{font-size:7.5px;letter-spacing:.04em}
+/* no_liq_price */
+.lq{left:42px;top:24px;width:2px;height:12px;background:#FF4D6A}
+.lql{left:38px;top:36px;font:700 6.5px/8px var(--mono);color:#FF4D6A;letter-spacing:.04em}
+.ro.q{font-size:8.5px;width:70px;left:176px}
+.ro.q.hot{color:#FF4D6A}
+.nl{left:42px;top:42px;font:700 8px/10px var(--mono);letter-spacing:.03em;color:var(--tacc)}
+.nl2{left:42px;top:52px;font:700 7px/8px var(--mono);letter-spacing:.02em;color:var(--mu2)}
 /* one_row */
 .tk{left:10px;width:150px;height:8px;font:700 7px/8px var(--mono);letter-spacing:.04em;color:var(--mu);transform-origin:0 0}
 .tk .v{position:absolute;right:0;top:0;color:var(--mu2)}
 .one{left:10px;top:23px;width:150px;height:22px;border:1px solid var(--acc);border-radius:6px;background:var(--bg);
   font:700 9px/20px var(--mono);letter-spacing:.02em;color:var(--tx);padding-left:22px;transform-origin:0 50%}
 .one i{position:absolute;left:8px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 6px var(--glow)}
-.one b{color:var(--acc);font-weight:700}
+.one b{color:var(--tacc);font-weight:700}
 .cnt{left:164px;top:16px;width:82px;text-align:center;font:900 22px/24px var(--sans);letter-spacing:-.03em;color:var(--tx)}
 .cntl{left:164px;top:41px;width:82px;text-align:center;font:700 7px/9px var(--mono);letter-spacing:.06em;color:var(--mu2)}
 
@@ -131,7 +140,7 @@ a.hit{inset:0;z-index:9;display:block;text-decoration:none}
 
   <div class="card" id="card">
     <div class="mid on" id="m-drift_vs_target">
-      <div class="ct">LEVERAGE · TARGET ~6×</div>
+      <div class="ct">LEVERAGE · NOT RETURNS</div>
       <div class="sl">BTC</div>
       <svg class="spark" viewBox="0 0 58 12" aria-hidden="true">
         <line x1="0" y1="6" x2="58" y2="6" stroke="#2A3040" stroke-width="1" stroke-dasharray="1.5 2"/>
@@ -139,13 +148,15 @@ a.hit{inset:0;z-index:9;display:block;text-decoration:none}
         <circle id="spd" cx="58" cy="6" r="1.7" fill="#F0B90B"/>
       </svg>
       <div class="tg"></div>
-      <div class="tgl">~6×</div>
+      <div class="tgl">~6× TARGET</div>
       <div class="lab a">PERP</div>
       <div class="trk a"></div>
       <div class="mk a" id="mka" style="left:119px"></div>
       <div class="ro a" id="roa">6.0×</div>
       <div class="lab b" id="labb">iVOL</div>
       <div class="trk b"></div>
+      <div class="gh" id="gh" style="left:119px;opacity:0"></div>
+      <div class="gl" id="gl" style="left:119px;width:0;opacity:0"></div>
       <div class="mk b" id="mkb" style="left:119px"></div>
       <div class="ro b" id="rob">6.0×</div>
       <div class="ci">ILLUSTRATIVE</div>
@@ -174,7 +185,7 @@ a.hit{inset:0;z-index:9;display:block;text-decoration:none}
       <div class="ci" style="top:5px">ILLUSTRATIVE</div>
     </div>
     <div class="mid" id="m-rebalance_dial">
-      <div class="ct">LEVERAGE · TARGET ~6×</div>
+      <div class="ct">LEVERAGE · NOT RETURNS</div>
       <div class="sl">BTC</div>
       <svg class="spark" viewBox="0 0 58 12" aria-hidden="true">
         <line x1="0" y1="6" x2="58" y2="6" stroke="#2A3040" stroke-width="1" stroke-dasharray="1.5 2"/>
@@ -193,6 +204,24 @@ a.hit{inset:0;z-index:9;display:block;text-decoration:none}
       <div class="dr a"><span class="k">PERP</span><span class="v" id="dva">6.0×</span></div>
       <div class="dr b"><span class="k" id="dkb">iVOL</span><span class="v" id="dvb">6.0×</span></div>
       <div class="ci">ILLUSTRATIVE</div>
+    </div>
+    <div class="mid" id="m-no_liq_price">
+      <div class="ct">YOUR LIQ. PRICE · ILLUSTRATIVE</div>
+      <div class="sl">BTC</div>
+      <svg class="spark" viewBox="0 0 58 12" aria-hidden="true">
+        <line x1="0" y1="6" x2="58" y2="6" stroke="#2A3040" stroke-width="1" stroke-dasharray="1.5 2"/>
+        <line id="spk3" x1="0" y1="6" x2="58" y2="6" stroke="#F0B90B" stroke-width="1.4" stroke-linecap="round"/>
+        <circle id="spd3" cx="58" cy="6" r="1.7" fill="#F0B90B"/>
+      </svg>
+      <div class="lab a">PERP</div>
+      <div class="trk a"></div>
+      <div class="lq"></div>
+      <div class="lql">LIQ</div>
+      <div class="mk a" id="mkq" style="left:196px"></div>
+      <div class="ro a q" id="roq">4.1% AWAY</div>
+      <div class="lab b" id="labq">iVOL</div>
+      <div class="nl" id="nl">NO LIQ. PRICE OF YOUR OWN ✓</div>
+      <div class="nl2">VAULT-MANAGED MARGIN · VAULT CAN BE LIQUIDATED</div>
     </div>
     <div class="mid" id="m-one_row">
       <div class="ct">A 6× PERP TICKET · VS · ONE TOKEN</div>
@@ -225,8 +254,8 @@ a.hit{inset:0;z-index:9;display:block;text-decoration:none}
    ===================================================================== */
 (function(){
   var PRODUCTS={
-    ivol:{name:"iVOL",side:"long", SIDE:"LONG", dir: 1,acc:"#2ED3A0",glow:"rgba(46,211,160,.55)",url:"https://hypertokens.io/lp/ivol/"},
-    vol :{name:"VOL", side:"short",SIDE:"SHORT",dir:-1,acc:"#FF4D6A",glow:"rgba(255,77,106,.55)",url:"https://hypertokens.io/lp/vol/"}
+    ivol:{name:"iVOL",side:"long", SIDE:"LONG", dir: 1,acc:"#2ED3A0",tacc:"#2ED3A0",glow:"rgba(46,211,160,.55)",url:"https://hypertokens.io/presell-ivol/"},
+    vol :{name:"VOL", side:"short",SIDE:"SHORT",dir:-1,acc:"#FF4D6A",tacc:"#FF7A90",glow:"rgba(255,77,106,.55)",url:"https://hypertokens.io/presell-vol/"}
   };
   var DEFAULTS={
     id:"HERO-01",
@@ -236,7 +265,7 @@ a.hit{inset:0;z-index:9;display:block;text-decoration:none}
     badge:"{NAME} · ~6x {SIDE} BTC",
     cta:"Get {NAME} →",
     pq:"LEVERAGED TOKEN · HIGH RISK",
-    mid:"drift_vs_target"   /* drift_vs_target | rebalance_dial | one_row | flow | big6x(retired) */
+    mid:"drift_vs_target"   /* drift_vs_target | rebalance_dial | one_row | no_liq_price | flow(retired) | big6x(retired) */
   };
   var q=new URLSearchParams(location.search);
   var pk=(q.get("p")||document.documentElement.getAttribute("data-p")||"ivol").toLowerCase();
@@ -244,12 +273,12 @@ a.hit{inset:0;z-index:9;display:block;text-decoration:none}
   function slot(k){var v=q.get(k); if(v===null) v=DEFAULTS[k];
     return v.replace(/\{name\}/g,P.name).replace(/\{NAME\}/g,P.name).replace(/\{side\}/g,P.side).replace(/\{SIDE\}/g,P.SIDE);}
   var $=function(id){return document.getElementById(id)};
-  var root=document.documentElement; root.style.setProperty("--acc",P.acc); root.style.setProperty("--glow",P.glow);
+  var root=document.documentElement; root.style.setProperty("--acc",P.acc); root.style.setProperty("--tacc",P.tacc); root.style.setProperty("--glow",P.glow);
   $("l1").innerHTML=slot("l1"); $("l2").textContent=slot("l2"); $("sub").textContent=slot("sub");
   $("badge").textContent=slot("badge"); $("cta").textContent=slot("cta"); $("pq").textContent=slot("pq");
   $("labb").textContent=P.name; $("ndt").textContent=P.name;
   $("bxs").textContent=P.SIDE+" BTC"; $("ndx").textContent="~6× "+P.SIDE+" BTC";
-  $("dkb").textContent=P.name; $("onek").textContent=P.name; $("one").childNodes[2].textContent="\u00a0· ~6× "+P.SIDE+" BTC";
+  $("dkb").textContent=P.name; $("labq").textContent=P.name; $("onek").textContent=P.name; $("one").childNodes[2].textContent="\u00a0· ~6× "+P.SIDE+" BTC";
   $("dlt").querySelector("line").setAttribute("stroke",P.acc); $("ndtc").setAttribute("fill",P.acc);
   if(q.get("capture")) $("ad").classList.add("capture");
   /* width guard: shrink to a floor, then flag (export refuses flagged units) */
@@ -288,7 +317,7 @@ a.hit{inset:0;z-index:9;display:block;text-decoration:none}
   function pillOpacity(u){ for(var k=shown.length-1;k>=0;k--){ var d=u-shown[k]; if(d>=0&&d<0.5) return d<0.12?d/0.12:1-(d-0.12)/0.38; } return 0; }
   function X(L){return TRK_L+TRK_W*clamp((L-LMIN)/(LMAX-LMIN),0,1)}
   var mka=$("mka"),mkb=$("mkb"),roa=$("roa"),rob=$("rob"),spk=$("spk"),spd=$("spd"),mkc=$("mkc"),roc=$("roc"),pulse=$("pulse"),ndx=$("ndx"),fr=$("fr"),
-      ndp=$("dlp"),ndt=$("dlt"),dva=$("dva"),dvb=$("dvb"),spk2=$("spk2"),spd2=$("spd2"),one=$("one"),cnt=$("cnt"),cntl=$("cntl"),tks=[$("tk0"),$("tk1"),$("tk2"),$("tk3"),$("tk4")];
+      ndp=$("dlp"),ndt=$("dlt"),dva=$("dva"),dvb=$("dvb"),spk2=$("spk2"),spd2=$("spd2"),mkq=$("mkq"),roq=$("roq"),spk3=$("spk3"),spd3=$("spd3"),gh=$("gh"),gl=$("gl"),one=$("one"),cnt=$("cnt"),cntl=$("cntl"),tks=[$("tk0"),$("tk1"),$("tk2"),$("tk3"),$("tk4")];
   function ang(L){return clamp((L-6)/6*180,-90,90)}
   function X2(L){return 82+114*clamp((L-LMIN)/(LMAX-LMIN),0,1)}
   function render(t){ var u=((t+PHASE)%LOOP+LOOP)%LOOP;
@@ -301,6 +330,13 @@ a.hit{inset:0;z-index:9;display:block;text-decoration:none}
       dva.textContent=lp.toFixed(1)+"×"; dva.classList.toggle("off",offd);
       if(pod>0){dvb.textContent="RE-SIZED";dvb.classList.add("flash");dvb.style.opacity=(0.35+0.65*pod).toFixed(3)} else {dvb.textContent=lt.toFixed(1)+"×";dvb.classList.remove("flash");dvb.style.opacity=1}
       var y2=(6-bb*90).toFixed(2); spk2.setAttribute("y2",y2); spd2.setAttribute("cy",y2); return; }
+    if(MID==="no_liq_price"){ /* an illustrative perp opened 4.1% from its liquidation price; distance shrinks as BTC moves against it.
+         own phase so frame 0 is the alarm for both products (a short is hurt by the +5% leg) */
+      var uq=P.dir>0?u:(u+2.3)%LOOP, bq=b(uq), bb=bq;
+      var dist=clamp(4.1+P.dir*bb*64,0.5,9), hot=dist<2.0, xq=TRK_L+TRK_W*clamp((dist-0.5)/8.5,0,1);
+      mkq.style.left=xq.toFixed(2)+"px"; mkq.classList.toggle("off",dist<3.5); if(hot){mkq.style.background="#FF4D6A"} else {mkq.style.background=""}
+      roq.textContent=dist.toFixed(1)+"% AWAY"; roq.classList.toggle("off",dist<3.5&&!hot); roq.classList.toggle("hot",hot);
+      var y3=(6-bb*90).toFixed(2); spk3.setAttribute("y2",y3); spd3.setAttribute("cy",y3); return; }
     if(MID==="one_row"){ /* own time base: ticket 0–1.6 · collapse 1.6–2.1 · one row 2.1–4.3 · expand 4.3–4.7 · ticket; frame 0 = one row */
       var uo=(u+1.10)%LOOP, c=0;
       if(uo<1.6)c=0; else if(uo<2.1)c=EO((uo-1.6)/0.5); else if(uo<4.3)c=1; else if(uo<4.7)c=1-EO((uo-4.3)/0.4); else c=0;
@@ -317,6 +353,10 @@ a.hit{inset:0;z-index:9;display:block;text-decoration:none}
     if(po>0){ rob.textContent="RE-SIZED"; rob.classList.add("flash"); rob.style.opacity=(0.35+0.65*po).toFixed(3); }
     else { rob.textContent=lt.toFixed(1)+"×"; rob.classList.remove("flash"); rob.style.opacity=1; }
     var sc=1+0.45*po; mkb.style.transform="scale("+sc.toFixed(3)+")";
+    var g=null; for(var k2=events.length-1;k2>=0;k2--){ var dd=u-events[k2].t; if(dd>=0&&dd<1.4&&Math.abs(events[k2].from-6)>=0.5){g=events[k2];break} }
+    if(g){ var gx=X(g.from), ga=(0.55*(1-(u-g.t)/1.4)).toFixed(3); gh.style.left=gx.toFixed(2)+"px"; gh.style.opacity=ga;
+      gl.style.left=Math.min(gx,xb).toFixed(2)+"px"; gl.style.width=Math.abs(gx-xb).toFixed(2)+"px"; gl.style.opacity=ga; }
+    else { gh.style.opacity=0; gl.style.opacity=0; }
     var y=(6-bb*90).toFixed(2); spk.setAttribute("y2",y); spd.setAttribute("cy",y);
   }
   window.seek=function(t){render(+t)}; window.__loop=LOOP;
