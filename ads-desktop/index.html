@@ -11,6 +11,17 @@ h1{font:900 22px/1.2 system-ui;margin:0 0 6px}.note{color:var(--mu);max-width:96
 .gif3{display:block;width:min(2184px,100%);height:auto;aspect-ratio:728/90;border:1px solid var(--bd);background:#000}
 a{color:var(--mint)}
 </style></head><body>
+<p id="phone-banner" style="margin:0 0 16px;padding:12px 14px;border:1px solid var(--mint);border-radius:8px;background:#12161f">
+  <strong style="color:var(--mint)">On a phone?</strong>
+  <a href="../ads-phone/">Open Ads on phone</a> (full-width stacked). This page is for desktop review.
+</p>
+<script>
+(function(){
+  if (window.innerWidth < 760) {
+    location.replace('../ads-phone/' + (location.hash || ''));
+  }
+})();
+</script>
 <h1>Hyper Tokens — desktop 728×90 (Fable R3)</h1>
 <p class="note">Live <code>/ads/</code> untouched. Fable R3 hero A+ / launch six A+. Presells: <a href="../presell-ivol/">presell-ivol</a> · <a href="../presell-vol/">presell-vol</a>. Interactive: <a href="hero.html">hero.html</a></p>
 <div class="row" id="IV-01">
